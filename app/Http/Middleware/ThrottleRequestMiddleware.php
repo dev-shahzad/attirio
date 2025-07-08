@@ -3,9 +3,11 @@
 namespace App\Http\Middleware;
 
 use Closure;
+
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\Auth;
 
 
 class ThrottleRequestMiddleware
@@ -17,7 +19,7 @@ class ThrottleRequestMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $key = 'user:' . $request->user()->id;
+        $key = 'user:' . Auth::id() ?? $request->ip();
 
 
         if (RateLimiter::tooManyAttempts($key, 2)) {
