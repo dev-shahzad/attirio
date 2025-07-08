@@ -15,7 +15,7 @@
                 @foreach($messages as $message)
                     <div class="flex {{ $message['type'] === 'user' ? 'justify-end' : 'justify-start' }}">
                         <div class="max-w-xs md:max-w-md lg:max-w-lg xl:max-w-xl rounded-lg p-4 shadow-sm 
-                                            {{ $message['type'] === 'user'
+                                                    {{ $message['type'] === 'user'
                     ? 'bg-indigo-600 text-white rounded-br-none'
                     : 'bg-gray-100 text-gray-800 rounded-bl-none' }}">
                             <div class="message-content">
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <!-- Input Container -->
+
         <div class="p-4 border-t border-gray-200 bg-white shadow-lg">
             <form id="messageForm" action="{{ route('chat.send') }}" method="POST" class="w-full">
                 @csrf

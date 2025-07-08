@@ -67,7 +67,7 @@
                     </button>
                 </div>
 
-
+                <!-- Model Selection -->
                 <div class="mb-4">
                     <label for="modelSelect" class="block text-sm font-medium text-gray-700 mb-1">Model</label>
                     <select id="modelSelect"
@@ -93,7 +93,7 @@
             <div class="bg-white border-b border-gray-200 p-4">
                 <div class="flex items-center justify-between">
                     <div>
-                        <h1 id="chatTitle" class="text-xl font-semibold text-gray-900">Ask AI</h1>
+                        <h1 id="chatTitle" class="text-xl font-semibold text-gray-900">Attirio</h1>
                         <div class="flex items-center gap-2 text-sm text-gray-500">
                             <div class="w-2 h-2 bg-green-500 rounded-full"></div>
                             <span>Online</span>
@@ -112,8 +112,8 @@
 
             <div class="flex-1 overflow-y-auto p-4" id="chatMessages">
                 <div id="welcomeMessage" class="text-center text-gray-500 mt-20">
-                    <div class="text-6xl mb-4">🤖</div>
-                    <h2 class="text-2xl font-semibold mb-2">Welcome to Ask AI</h2>
+                    <!-- <div class="text-6xl mb-4">🤖</div> -->
+                    <h2 class="text-2xl font-semibold mb-2">Welcome Attirio</h2>
                     <p>Start a new conversation by typing a message below.</p>
                 </div>
             </div>
@@ -488,7 +488,7 @@
                         success: function () {
                             $('#deleteModal').addClass('hidden').removeClass('flex');
                             currentConversationId = null;
-                            $('#chatTitle').text('Ask AI');
+                            $('#chatTitle').text('Attirio');
                             $('#currentModel').text('GPT-3.5 Turbo');
                             $('#deleteConversationBtn').addClass('hidden');
                             $('#chatMessages').empty();
