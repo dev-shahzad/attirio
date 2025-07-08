@@ -514,19 +514,13 @@
                 console.log('Current model display updated to:', modelName);
             });
 
-            // Initialize
-            console.log('Starting initialization...');
 
-            // Check if required elements exist
-            console.log('Message input exists:', $('#messageInput').length > 0);
-            console.log('Send button exists:', $('#sendButton').length > 0);
-            console.log('Model select exists:', $('#modelSelect').length > 0);
-            console.log('New Chat button exists:', $('#newChatBtn').length > 0);
 
-            loadModels();
+
+            // loadModels();
             loadConversations();
 
-            // Focus on message input after a short delay to ensure DOM is ready
+
             setTimeout(function () {
                 $('#messageInput').focus();
                 console.log('Focused on message input');
