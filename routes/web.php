@@ -9,7 +9,7 @@ Route::get('/', function () {
         return redirect()->route('conversations.chat.index');
     }
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return redirect()->route('conversations.chat.index');
