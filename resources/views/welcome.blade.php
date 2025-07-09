@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Attirio - AI Chat Assistant</title>
+    <title>Attirio - AI Assistant</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -282,7 +282,7 @@
             <!-- Animated Heading -->
             <div class="mb-8 animate-slide-up" style="animation-delay: 0.2s;">
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight">
-                    <span class="text-gradient">AI Chat</span>
+                    <span class="text-white">AI</span>
                     <br>
                     <span class="typing-effect">Assistant</span>
                 </h1>
