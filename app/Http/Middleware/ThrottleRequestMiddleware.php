@@ -22,7 +22,7 @@ class ThrottleRequestMiddleware
         $key = Auth::check() ? 'user:' . Auth::id() : 'ip:' . $request->ip();
 
 
-        if (RateLimiter::tooManyAttempts($key, 2)) {
+        if (RateLimiter::tooManyAttempts($key, 60)) {
             return response()->json([
                 'message' => 'Too many requests. Please wait a minute.',
             ], Response::HTTP_TOO_MANY_REQUESTS);
