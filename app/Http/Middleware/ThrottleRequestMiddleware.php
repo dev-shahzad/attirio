@@ -19,7 +19,7 @@ class ThrottleRequestMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $key = 'user:' . Auth::id() ?? $request->ip();
+        $key = Auth::check() ? 'user:' . Auth::id() : 'ip:' . $request->ip();
 
 
         if (RateLimiter::tooManyAttempts($key, 2)) {

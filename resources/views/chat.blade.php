@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     <button id="deleteConversationBtn"
-                        class="text-red-600 hover:text-red-700 px-3 py-2 rounded-lg text-sm hidden">
+                        class="ml-10 text-red-600 hover:text-red-700 px-3 py-2 rounded-lg text-sm hidden">
                         <i class="fas fa-trash"></i>
                         Delete
                     </button>

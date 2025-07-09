@@ -26,8 +26,7 @@ Route::middleware('auth')->group(function () {
 
 
 
-    Route::name('conversations.')->controller(ChatController::class)->group(function () {
-
+    Route::middleware('auth')->name('conversations.')->controller(ChatController::class)->group(function () {
         Route::get('/chat', 'index')->name('chat.index');
         Route::get('/conversations', 'list')->name('index');
         Route::post('/conversations', 'createConversation')->name('create');
@@ -35,7 +34,6 @@ Route::middleware('auth')->group(function () {
         Route::delete('/conversations/{id}', 'delete')->name('delete');
         Route::post('/chat/send', 'sendMessage')->name('api.chat.send')->middleware('throttle.request');
         Route::get('/models', 'getAvailableModels')->name('models');
-
     });
 
 });
